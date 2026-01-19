@@ -2,7 +2,6 @@ from typing import Dict, List, Set, Tuple, Optional
 from decimal import Decimal
 from datetime import datetime
 import threading
-import heapq
 # =========================
 # PRODUCT CATALOG
 # =========================
@@ -13,7 +12,7 @@ price_index: List[Tuple[Decimal, str]] = []
 
 # =========================
 # INVENTORY & CONCURRENCY
-# =========================
+# =========================s
 
 product_locks: Dict[str, threading.Lock] = {}
 
@@ -29,12 +28,6 @@ carts: Dict[str, dict] = {}
 
 orders: Dict[str, dict] = {}
 user_orders: Dict[str, List[str]] = {}
-
-# =========================
-# USER PRIORITY QUEUE
-# =========================
-
-priority_queue: List[Tuple[int, datetime, str]] = []
 
 # Product Schema
 # {
