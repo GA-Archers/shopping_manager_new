@@ -12,7 +12,7 @@ from common.datastore import (
 )
 
 from functions.feature3 import OrderProcessor
-from functions.feature3 import search_by_price_range, search_by_category
+from functions.feature4 import search_by_price_range, search_by_category
 
 # =========================
 # PRODUCT OPERATIONS (UNCHANGED)
